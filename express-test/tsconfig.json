@@ -4,11 +4,15 @@
     "module": "commonjs",
     "sourceMap": true,
     "outDir": "./dist",
+    "moduleResolution": "node",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "strictNullChecks": true,
     "strictFunctionTypes": true,
     "skipLibCheck": true
-  }
+  },
+  "include": [
+    "./src"
+  ]
 }
