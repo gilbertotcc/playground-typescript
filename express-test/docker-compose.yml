@@ -1,0 +1,15 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: express
+      POSTGRES_PASSWORD: express
+      POSTGRES_DB: express
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD", "pg_isready", "--username", "express", "--dbname", "express"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
